@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>星座</title>
+</head>
+<body>
+<form action="#" id="form">
+生年月日
+<select name="tuki">
+<option>1</option><option>2</option><option>3</option><option>4</option>
+<option>5</option><option>6</option><option>7</option><option>8</option>
+<option>9</option><option>10</option><option>11</option><option>12</option>
+//12
+</select>
+月
+<select name="hi">
+  <option>1</option><option>2</option><option>3</option><option>4</option>
+  <option>5</option><option>6</option><option>7</option><option>8</option>
+  <option>9</option><option>10</option>
+  <option>11</option><option>12</option><option>13</option><option>14</option>
+  <option>15</option><option>16</option><option>17</option><option>18</option>
+  <option>19</option><option>20</option>
+  <option>21</option><option>22</option><option>23</option><option>24</option>
+  <option>25</option><option>26</option><option>27</option><option>28</option>
+  <option>29</option><option>30</option><option>31</option>
+//31
+</select>
+日
+<input type="submit" value="占ってみよう！" id=b1>
+</form>
+<h1>星座占い</h1>
+<p><span id="01"></span>座</p><br>
+    <p>願望：<span id="02"></span></p><br>
+    <p>健康：<span id="03"></span></p><br>
+    <p>恋愛：<span id="04"></span></p><br>
+    <p>金運：<span id="05"></span></p><br>
+    <p>学問：<span id="06"></span></p><br>
+
+<script>
+  'use strict';
+document.getElementById('form').onsubmit=function(event){
+  event.preventDefault();
+
+  const TUKI =document.getElementById('form').tuki.value;
+  console.log(TUKI);
+  const HI = document.getElementById('form').hi.value;
+  console.log(HI);
+
+if((TUKI ==3 && HI >=21) ||(TUKI == 4 && HI <=19)){
+  document.getElementById('01').textContent ="おひつじ";
+}
+
+if((TUKI ==4 && HI >=20) ||(TUKI == 5 && HI <=20)){
+  document.getElementById('01').textContent ="おうし";
+}
+if((TUKI ==5 && HI >=21) ||(TUKI == 6 && HI <=21)){
+  document.getElementById('01').textContent ="ふたご";
+}
+if((TUKI ==6 && HI >=22) ||(TUKI == 7 && HI <=22)){
+  document.getElementById('01').textContent ="かに";
+}
+if((TUKI ==7 && HI >=23) ||(TUKI == 8 && HI <=22)){
+  document.getElementById('01').textContent ="しし";
+}
+if((TUKI ==8 && HI >=23) ||(TUKI == 9 && HI <=22)){
+  document.getElementById('01').textContent ="おとめ";
+}
+if((TUKI ==9 && HI >=23) ||(TUKI == 10 && HI <=23)){
+  document.getElementById('01').textContent ="てんびん";
+}
+if((TUKI ==10 && HI >=24) ||(TUKI == 11 && HI <=22)){
+  document.getElementById('01').textContent ="さそり";
+}
+if((TUKI ==11 && HI >=23) ||(TUKI == 12 && HI <=21)){
+  document.getElementById('01').textContent ="いて";
+}
+if((TUKI ==12 && HI >=22) ||(TUKI == 1 && HI <=19)){
+  document.getElementById('01').textContent ="やぎ";
+}
+if((TUKI ==1 && HI >=20) ||(TUKI == 2 && HI <=18)){
+  document.getElementById('01').textContent ="みずがめ";
+}
+if((TUKI ==2 && HI >=19) ||(TUKI == 3 && HI <=20)){
+  document.getElementById('01').textContent ="うお";
+}
+
+
+
+
+
+  
+  let r = Math.floor( Math.random() *5) ;//おみくじぶんの数字を作ります
+let gan = ["★","★★","★★★","★★★★","★★★★★"];
+const kekka1=`${gan[r]}`;
+document.getElementById("02").textContent=kekka1;//結果をid="kekka"に表示します
+
+let a = Math.floor( Math.random() *5) ;//おみくじぶんの数字を作ります
+let ken = ["★","★★","★★★","★★★★","★★★★★"];
+const kekka2=`${ken[a]}`;
+document.getElementById("03").textContent=kekka2;
+
+let b = Math.floor( Math.random() *5) ;//おみくじぶんの数字を作ります
+let ren = ["★","★★","★★★","★★★★","★★★★★"];
+const kekka3=`${ren[b]}`;
+document.getElementById("04").textContent=kekka3;
+
+let c = Math.floor( Math.random() *5) ;//おみくじぶんの数字を作ります
+let kin = ["★","★★","★★★","★★★★","★★★★★"];
+const kekka4=`${ren[c]}`;
+document.getElementById("05").textContent=kekka4;
+
+let d = Math.floor( Math.random() *5) ;//おみくじぶんの数字を作ります
+let ga = ["★","★★","★★★","★★★★","★★★★★"];
+const kekka5=`${ren[d]}`;
+document.getElementById("06").textContent=kekka5;
+
+}
+
+
+  
+</script>
+
+</body>
+</html>
